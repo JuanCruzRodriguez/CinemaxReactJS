@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+body{
+  padding: 1em 3em;
+  background-color: black;
+  color: white;
+}    
+
+header nav{
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header nav a{
+  color: white;
+  text-decoration: none;
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul{
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header{
+  display: flex;
+  position: sticky;
+  top: 0%;
+  padding: 0.2% 0;
+  background-color: black;
+  align-items: center;
+}
+
+header ul{
+  display: flex;
+  align-items: center;
+}
+
+header ul li{
+  font-size: 15px;
+  padding-left: 0.5em;
+  padding-right: 2em;
+}
+
+header ul li :hover{
+  color: rgb(170, 170, 170);
+  transition-duration: 500ms;
+}
+
+.logo{
+    margin-top: 0.3em;
+}
+
+.logo:hover{
+  transform: scale(106%);
+  transition-duration: 400ms;
+}
+
+.botonCarrito{
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  margin-left: 2%;
+  margin-top: 0.2em;
+}
+
+.botonCarrito:hover{
+  color: rgb(170, 170, 170);
+  transition-duration: 500ms;
+  cursor: pointer; 
+}
+
+.botonUser{
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5em;
+  margin-left: 6%;
+  margin-top: 2%;
+}
+
+.botonUser:hover{
+  color: rgb(170, 170, 170);
+  transition-duration: 500ms;
+  cursor: pointer; 
+}
+
+.notificacionCarrito{
+  position: absolute;
+  background-color: #DC1A28;
+  font-size: 0.6em;
+  border-radius: 10px;
+  padding: 0 0.3em;
+  margin-left: 1.2em;
+  bottom: 52%;
+}
+
+.itemCount{
+  display: flex;
+}
+
+.itemCount button{
+  display: flex;
+  margin: 0 1em;
+  padding: 0 1.5em;
+  border-radius: 10px ;
+  background-color: #DC1A28;
+  border: none;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemCount button:hover{
+  background-color: #630d14;
+  transition-duration: 400ms;
+  cursor: pointer;
+}
+
+.peliculas{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 4em;
+  grid-row-gap: 4em;
+  padding-top: 2em ;
+  padding-bottom: 2em;
+}
+
+.cardPelicula{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cardPelicula img:hover{
+  cursor: pointer;
+  transform: scale(104%);
+  transition-duration: 500ms;
+  opacity: 50% black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardPelicula h3{
+  font-size: 1em;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.peliculas .cardPelicula img{
+  height: 350px;
+  border-radius: 10px;
 }
